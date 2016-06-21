@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="iOS_ExploreModelStoreContainer" CdmEntityContainer="iOS_ExploreEntities">
+    <EntitySetMapping Name="cities">
+      <EntityTypeMapping TypeName="iOS_ExploreModel.city">
+        <MappingFragment StoreEntitySet="cities">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries">
+      <EntityTypeMapping TypeName="iOS_ExploreModel.country">
+        <MappingFragment StoreEntitySet="country">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sortname" ColumnName="sortname" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lst_Asst_Coach">
+      <EntityTypeMapping TypeName="iOS_ExploreModel.Lst_Asst_Coach">
+        <MappingFragment StoreEntitySet="Lst_Asst_Coach">
+          <ScalarProperty Name="Asst_Coach_id" ColumnName="Asst_Coach_id" />
+          <ScalarProperty Name="head_Coach_Email" ColumnName="head_Coach_Email" />
+          <ScalarProperty Name="Asst_Coach_name" ColumnName="Asst_Coach_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reg_Coach">
+      <EntityTypeMapping TypeName="iOS_ExploreModel.Reg_Coach">
+        <MappingFragment StoreEntitySet="Reg_Coach">
+          <ScalarProperty Name="Coach_id" ColumnName="Coach_id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Sport" ColumnName="Sport" />
+          <ScalarProperty Name="CoachType" ColumnName="CoachType" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Addrss" ColumnName="Addrss" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="play_State" ColumnName="play_State" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="SchoolAddrss" ColumnName="SchoolAddrss" />
+          <ScalarProperty Name="DivisionSchool" ColumnName="DivisionSchool" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="Image_path" ColumnName="Image_path" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="PlayrTrained" ColumnName="PlayrTrained" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reg_Player">
+      <EntityTypeMapping TypeName="iOS_ExploreModel.Reg_Player">
+        <MappingFragment StoreEntitySet="Reg_Player">
+          <ScalarProperty Name="play_id" ColumnName="play_id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Sport" ColumnName="Sport" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="playWeight" ColumnName="playWeight" />
+          <ScalarProperty Name="Wingspan" ColumnName="Wingspan" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="Addrss" ColumnName="Addrss" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Image_path" ColumnName="Image_path" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="play_State" ColumnName="play_State" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="Club" ColumnName="Club" />
+          <ScalarProperty Name="ACT" ColumnName="ACT" />
+          <ScalarProperty Name="Grade_avg" ColumnName="Grade_avg" />
+          <ScalarProperty Name="DocumntPath" ColumnName="DocumntPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="states">
+      <EntityTypeMapping TypeName="iOS_ExploreModel.state">
+        <MappingFragment StoreEntitySet="states">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="country_id" ColumnName="country_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

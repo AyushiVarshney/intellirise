@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Explore_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Basketball">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SportID" Type="int" Nullable="false" />
+    <Property Name="P_YDS" Type="int" />
+    <Property Name="R_YDS" Type="int" />
+    <Property Name="Tot_TDs" Type="int" />
+    <Property Name="Tot_Sacks" Type="int" />
+    <Property Name="RU_YDs" Type="int" />
+    <Property Name="Tot_PTS" Type="int" />
+    <Property Name="Tot_Tcks" Type="int" />
+    <Property Name="Tot_YDs" Type="int" />
+    <Property Name="Tot_Ints" Type="int" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" Nullable="false" />
+    <Property Name="CityName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="StateID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CoachDetails">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+    <Property Name="Contact_No" Type="varchar" MaxLength="10" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+    <Property Name="StateID" Type="int" Nullable="false" />
+    <Property Name="CityID" Type="int" Nullable="false" />
+    <Property Name="SportID" Type="int" Nullable="false" />
+    <Property Name="SchoolName" Type="varchar" MaxLength="50" />
+    <Property Name="SchoolAddress" Type="varchar" MaxLength="50" />
+    <Property Name="AssistantCoach" Type="varchar" MaxLength="20" />
+    <Property Name="SchoolDivision" Type="varchar" MaxLength="20" />
+    <Property Name="SessionCost" Type="int" />
+    <Property Name="SessionHours" Type="int" />
+    <Property Name="Experience" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="int" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Football">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SportID" Type="int" Nullable="false" />
+    <Property Name="PTS" Type="float" />
+    <Property Name="FG" Type="float" />
+    <Property Name="FT" Type="float" />
+    <Property Name="TP" Type="float" />
+    <Property Name="RBS" Type="float" />
+    <Property Name="AST" Type="float" />
+    <Property Name="STL" Type="float" />
+    <Property Name="BLK" Type="float" />
+    <Property Name="MIN" Type="float" />
+  </EntityType>
+  <EntityType Name="ImageDetails">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Name="ImageID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FileType" Type="int" />
+    <Property Name="FileName" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PlayerDetails">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+    <Property Name="Contact_No" Type="varchar" MaxLength="10" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+    <Property Name="StateID" Type="int" Nullable="false" />
+    <Property Name="CityID" Type="int" Nullable="false" />
+    <Property Name="SportID" Type="int" Nullable="false" />
+    <Property Name="Position" Type="varchar" MaxLength="20" />
+    <Property Name="Experience" Type="varchar" MaxLength="10" />
+    <Property Name="SchoolName" Type="varchar" MaxLength="50" />
+    <Property Name="SchoolAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Wingspan" Type="varchar" MaxLength="20" />
+    <Property Name="Height" Type="int" />
+    <Property Name="Weight" Type="int" />
+    <Property Name="Club" Type="varchar" MaxLength="20" />
+    <Property Name="Score" Type="int" />
+    <Property Name="GPA" Type="int" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="int" Nullable="false" />
+    <Property Name="StateName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserDetails">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Explore_DBModelStoreContainer">
+    <EntitySet Name="Basketball" EntityType="Self.Basketball" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CoachDetails" EntityType="Self.CoachDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Football" EntityType="Self.Football" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ImageDetails" EntityType="Self.ImageDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlayerDetails" EntityType="Self.PlayerDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserDetails" EntityType="Self.UserDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

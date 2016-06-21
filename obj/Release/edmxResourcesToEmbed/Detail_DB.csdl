@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="iOS_ExploreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Lst_Asst_Coach">
+    <Key>
+      <PropertyRef Name="Asst_Coach_id" />
+    </Key>
+    <Property Name="Asst_Coach_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="head_Coach_Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Asst_Coach_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Reg_Coach">
+    <Key>
+      <PropertyRef Name="Coach_id" />
+    </Key>
+    <Property Name="Coach_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Sport" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CoachType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Addrss" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="play_State" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolAddrss" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DivisionSchool" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cost" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Experience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="PlayrTrained" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Reg_Player">
+    <Key>
+      <PropertyRef Name="play_id" />
+    </Key>
+    <Property Name="play_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Sport" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="Position" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="playWeight" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Wingspan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Experience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Addrss" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="play_State" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Club" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Grade_avg" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DocumntPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="iOS_ExploreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Lst_Asst_Coach" EntityType="Self.Lst_Asst_Coach" />
+    <EntitySet Name="Reg_Coach" EntityType="Self.Reg_Coach" />
+    <EntitySet Name="Reg_Player" EntityType="Self.Reg_Player" />
+  </EntityContainer>
+</Schema>

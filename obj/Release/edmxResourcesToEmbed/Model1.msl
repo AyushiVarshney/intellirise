@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Explore_DBModelStoreContainer" CdmEntityContainer="Explore_DBEntities1">
+    <EntitySetMapping Name="Basketballs">
+      <EntityTypeMapping TypeName="Explore_DBModel.Basketball">
+        <MappingFragment StoreEntitySet="Basketball">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="SportID" ColumnName="SportID" />
+          <ScalarProperty Name="P_YDS" ColumnName="P_YDS" />
+          <ScalarProperty Name="R_YDS" ColumnName="R_YDS" />
+          <ScalarProperty Name="Tot_TDs" ColumnName="Tot_TDs" />
+          <ScalarProperty Name="Tot_Sacks" ColumnName="Tot_Sacks" />
+          <ScalarProperty Name="RU_YDs" ColumnName="RU_YDs" />
+          <ScalarProperty Name="Tot_PTS" ColumnName="Tot_PTS" />
+          <ScalarProperty Name="Tot_Tcks" ColumnName="Tot_Tcks" />
+          <ScalarProperty Name="Tot_YDs" ColumnName="Tot_YDs" />
+          <ScalarProperty Name="Tot_Ints" ColumnName="Tot_Ints" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="Explore_DBModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoachDetails">
+      <EntityTypeMapping TypeName="Explore_DBModel.CoachDetail">
+        <MappingFragment StoreEntitySet="CoachDetails">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="Contact_No" ColumnName="Contact_No" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="SportID" ColumnName="SportID" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="SchoolAddress" ColumnName="SchoolAddress" />
+          <ScalarProperty Name="AssistantCoach" ColumnName="AssistantCoach" />
+          <ScalarProperty Name="SchoolDivision" ColumnName="SchoolDivision" />
+          <ScalarProperty Name="SessionCost" ColumnName="SessionCost" />
+          <ScalarProperty Name="SessionHours" ColumnName="SessionHours" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="Explore_DBModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Footballs">
+      <EntityTypeMapping TypeName="Explore_DBModel.Football">
+        <MappingFragment StoreEntitySet="Football">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="SportID" ColumnName="SportID" />
+          <ScalarProperty Name="PTS" ColumnName="PTS" />
+          <ScalarProperty Name="FG" ColumnName="FG" />
+          <ScalarProperty Name="FT" ColumnName="FT" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="RBS" ColumnName="RBS" />
+          <ScalarProperty Name="AST" ColumnName="AST" />
+          <ScalarProperty Name="STL" ColumnName="STL" />
+          <ScalarProperty Name="BLK" ColumnName="BLK" />
+          <ScalarProperty Name="MIN" ColumnName="MIN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImageDetails">
+      <EntityTypeMapping TypeName="Explore_DBModel.ImageDetail">
+        <MappingFragment StoreEntitySet="ImageDetails">
+          <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlayerDetails">
+      <EntityTypeMapping TypeName="Explore_DBModel.PlayerDetail">
+        <MappingFragment StoreEntitySet="PlayerDetails">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="Contact_No" ColumnName="Contact_No" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="SportID" ColumnName="SportID" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="SchoolAddress" ColumnName="SchoolAddress" />
+          <ScalarProperty Name="Wingspan" ColumnName="Wingspan" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Club" ColumnName="Club" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="GPA" ColumnName="GPA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="Explore_DBModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDetails">
+      <EntityTypeMapping TypeName="Explore_DBModel.UserDetail">
+        <MappingFragment StoreEntitySet="UserDetails">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

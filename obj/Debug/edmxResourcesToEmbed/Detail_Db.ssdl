@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="iOS_ExploreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="state_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="sortname" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lst_Asst_Coach">
+    <Key>
+      <PropertyRef Name="Asst_Coach_id" />
+    </Key>
+    <Property Name="Asst_Coach_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="head_Coach_Email" Type="varchar" MaxLength="30" />
+    <Property Name="Asst_Coach_name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Reg_Coach">
+    <Key>
+      <PropertyRef Name="Coach_id" />
+    </Key>
+    <Property Name="Coach_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="60" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="Sport" Type="varchar" MaxLength="25" />
+    <Property Name="CoachType" Type="varchar" MaxLength="30" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Pass" Type="nvarchar(max)" />
+    <Property Name="Addrss" Type="varchar" MaxLength="30" />
+    <Property Name="City" Type="varchar" MaxLength="25" />
+    <Property Name="play_State" Type="varchar" MaxLength="25" />
+    <Property Name="country" Type="varchar" MaxLength="25" />
+    <Property Name="SchoolName" Type="varchar" MaxLength="60" />
+    <Property Name="SchoolAddrss" Type="nvarchar(max)" />
+    <Property Name="DivisionSchool" Type="nvarchar(max)" />
+    <Property Name="Cost" Type="varchar" MaxLength="50" />
+    <Property Name="Experience" Type="nvarchar(max)" />
+    <Property Name="Image_path" Type="nvarchar(max)" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="PlayrTrained" Type="int" />
+  </EntityType>
+  <EntityType Name="Reg_Player">
+    <Key>
+      <PropertyRef Name="play_id" />
+    </Key>
+    <Property Name="play_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="60" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="Sport" Type="varchar" MaxLength="25" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Position" Type="varchar" MaxLength="25" />
+    <Property Name="Height" Type="varchar" MaxLength="20" />
+    <Property Name="playWeight" Type="varchar" MaxLength="20" />
+    <Property Name="Wingspan" Type="varchar" MaxLength="50" />
+    <Property Name="Experience" Type="nvarchar(max)" />
+    <Property Name="Addrss" Type="varchar" MaxLength="30" />
+    <Property Name="Pass" Type="nvarchar(max)" />
+    <Property Name="Image_path" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="City" Type="varchar" MaxLength="25" />
+    <Property Name="play_State" Type="varchar" MaxLength="25" />
+    <Property Name="country" Type="varchar" MaxLength="25" />
+    <Property Name="SchoolName" Type="varchar" MaxLength="60" />
+    <Property Name="Club" Type="varchar" MaxLength="50" />
+    <Property Name="ACT" Type="varchar" MaxLength="20" />
+    <Property Name="Grade_avg" Type="varchar" MaxLength="10" />
+    <Property Name="DocumntPath" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="states">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="30" />
+    <Property Name="country_id" Type="int" />
+  </EntityType>
+  <EntityContainer Name="iOS_ExploreModelStoreContainer">
+    <EntitySet Name="cities" EntityType="Self.cities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="country" EntityType="Self.country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lst_Asst_Coach" EntityType="Self.Lst_Asst_Coach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reg_Coach" EntityType="Self.Reg_Coach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reg_Player" EntityType="Self.Reg_Player" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="states" EntityType="Self.states" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

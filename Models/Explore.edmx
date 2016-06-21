@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ExploreDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Basketball">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SportID" Type="int" Nullable="false" />
+          <Property Name="P_YDS" Type="int" />
+          <Property Name="R_YDS" Type="int" />
+          <Property Name="Tot_TDs" Type="int" />
+          <Property Name="Tot_Sacks" Type="int" />
+          <Property Name="RU_YDs" Type="int" />
+          <Property Name="Tot_PTS" Type="int" />
+          <Property Name="Tot_Tcks" Type="int" />
+          <Property Name="Tot_YDs" Type="int" />
+          <Property Name="Tot_Ints" Type="int" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="CityName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="StateID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoachDetails">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="UserType" Type="int" Nullable="false" />
+          <Property Name="Contact_No" Type="varchar" MaxLength="10" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Gender" Type="varchar" MaxLength="10" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="SportID" Type="int" Nullable="false" />
+          <Property Name="SchoolName" Type="varchar" MaxLength="50" />
+          <Property Name="SchoolAddress" Type="varchar" MaxLength="50" />
+          <Property Name="AssistantCoach" Type="varchar" MaxLength="20" />
+          <Property Name="SchoolDivision" Type="varchar" MaxLength="20" />
+          <Property Name="SessionCost" Type="int" />
+          <Property Name="SessionHours" Type="int" />
+          <Property Name="Experience" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="CountryName" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Football">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SportID" Type="int" Nullable="false" />
+          <Property Name="PTS" Type="float" />
+          <Property Name="FG" Type="float" />
+          <Property Name="FT" Type="float" />
+          <Property Name="TP" Type="float" />
+          <Property Name="RBS" Type="float" />
+          <Property Name="AST" Type="float" />
+          <Property Name="STL" Type="float" />
+          <Property Name="BLK" Type="float" />
+          <Property Name="MIN" Type="float" />
+        </EntityType>
+        <EntityType Name="PlayerDetails">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="UserType" Type="int" Nullable="false" />
+          <Property Name="Contact_No" Type="varchar" MaxLength="10" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Gender" Type="varchar" MaxLength="10" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="SportID" Type="int" Nullable="false" />
+          <Property Name="Position" Type="varchar" MaxLength="20" />
+          <Property Name="Experience" Type="varchar" MaxLength="10" />
+          <Property Name="SchoolName" Type="varchar" MaxLength="50" />
+          <Property Name="SchoolAddress" Type="varchar" MaxLength="50" />
+          <Property Name="Wingspan" Type="varchar" MaxLength="20" />
+          <Property Name="Height" Type="int" />
+          <Property Name="Weight" Type="int" />
+          <Property Name="Club" Type="varchar" MaxLength="20" />
+          <Property Name="Score" Type="int" />
+          <Property Name="GPA" Type="int" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="StateName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserDetails">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="UserType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ExploreDBModelStoreContainer">
+          <EntitySet Name="Basketball" EntityType="Self.Basketball" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CoachDetails" EntityType="Self.CoachDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Football" EntityType="Self.Football" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlayerDetails" EntityType="Self.PlayerDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserDetails" EntityType="Self.UserDetails" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ExploreDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Basketball">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SportID" Type="Int32" Nullable="false" />
+          <Property Name="P_YDS" Type="Int32" />
+          <Property Name="R_YDS" Type="Int32" />
+          <Property Name="Tot_TDs" Type="Int32" />
+          <Property Name="Tot_Sacks" Type="Int32" />
+          <Property Name="RU_YDs" Type="Int32" />
+          <Property Name="Tot_PTS" Type="Int32" />
+          <Property Name="Tot_Tcks" Type="Int32" />
+          <Property Name="Tot_YDs" Type="Int32" />
+          <Property Name="Tot_Ints" Type="Int32" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="Int32" Nullable="false" />
+          <Property Name="CityName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CoachDetail">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserType" Type="Int32" Nullable="false" />
+          <Property Name="Contact_No" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="CityID" Type="Int32" Nullable="false" />
+          <Property Name="SportID" Type="Int32" Nullable="false" />
+          <Property Name="SchoolName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SchoolAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AssistantCoach" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SchoolDivision" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SessionCost" Type="Int32" />
+          <Property Name="SessionHours" Type="Int32" />
+          <Property Name="Experience" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="CountryName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Football">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SportID" Type="Int32" Nullable="false" />
+          <Property Name="PTS" Type="Double" />
+          <Property Name="FG" Type="Double" />
+          <Property Name="FT" Type="Double" />
+          <Property Name="TP" Type="Double" />
+          <Property Name="RBS" Type="Double" />
+          <Property Name="AST" Type="Double" />
+          <Property Name="STL" Type="Double" />
+          <Property Name="BLK" Type="Double" />
+          <Property Name="MIN" Type="Double" />
+        </EntityType>
+        <EntityType Name="PlayerDetail">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserType" Type="Int32" Nullable="false" />
+          <Property Name="Contact_No" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="CityID" Type="Int32" Nullable="false" />
+          <Property Name="SportID" Type="Int32" Nullable="false" />
+          <Property Name="Position" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Experience" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SchoolName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SchoolAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Wingspan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Height" Type="Int32" />
+          <Property Name="Weight" Type="Int32" />
+          <Property Name="Club" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Score" Type="Int32" />
+          <Property Name="GPA" Type="Int32" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="StateName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserDetail">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserType" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ExploreDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Basketballs" EntityType="Self.Basketball" />
+          <EntitySet Name="Cities" EntityType="Self.City" />
+          <EntitySet Name="CoachDetails" EntityType="Self.CoachDetail" />
+          <EntitySet Name="Countries" EntityType="Self.Country" />
+          <EntitySet Name="Footballs" EntityType="Self.Football" />
+          <EntitySet Name="PlayerDetails" EntityType="Self.PlayerDetail" />
+          <EntitySet Name="States" EntityType="Self.State" />
+          <EntitySet Name="UserDetails" EntityType="Self.UserDetail" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ExploreDBModelStoreContainer" CdmEntityContainer="ExploreDBEntities">
+          <EntitySetMapping Name="Basketballs">
+            <EntityTypeMapping TypeName="ExploreDBModel.Basketball">
+              <MappingFragment StoreEntitySet="Basketball">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="SportID" ColumnName="SportID" />
+                <ScalarProperty Name="P_YDS" ColumnName="P_YDS" />
+                <ScalarProperty Name="R_YDS" ColumnName="R_YDS" />
+                <ScalarProperty Name="Tot_TDs" ColumnName="Tot_TDs" />
+                <ScalarProperty Name="Tot_Sacks" ColumnName="Tot_Sacks" />
+                <ScalarProperty Name="RU_YDs" ColumnName="RU_YDs" />
+                <ScalarProperty Name="Tot_PTS" ColumnName="Tot_PTS" />
+                <ScalarProperty Name="Tot_Tcks" ColumnName="Tot_Tcks" />
+                <ScalarProperty Name="Tot_YDs" ColumnName="Tot_YDs" />
+                <ScalarProperty Name="Tot_Ints" ColumnName="Tot_Ints" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="ExploreDBModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoachDetails">
+            <EntityTypeMapping TypeName="ExploreDBModel.CoachDetail">
+              <MappingFragment StoreEntitySet="CoachDetails">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="Contact_No" ColumnName="Contact_No" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="SportID" ColumnName="SportID" />
+                <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+                <ScalarProperty Name="SchoolAddress" ColumnName="SchoolAddress" />
+                <ScalarProperty Name="AssistantCoach" ColumnName="AssistantCoach" />
+                <ScalarProperty Name="SchoolDivision" ColumnName="SchoolDivision" />
+                <ScalarProperty Name="SessionCost" ColumnName="SessionCost" />
+                <ScalarProperty Name="SessionHours" ColumnName="SessionHours" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="ExploreDBModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Footballs">
+            <EntityTypeMapping TypeName="ExploreDBModel.Football">
+              <MappingFragment StoreEntitySet="Football">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="SportID" ColumnName="SportID" />
+                <ScalarProperty Name="PTS" ColumnName="PTS" />
+                <ScalarProperty Name="FG" ColumnName="FG" />
+                <ScalarProperty Name="FT" ColumnName="FT" />
+                <ScalarProperty Name="TP" ColumnName="TP" />
+                <ScalarProperty Name="RBS" ColumnName="RBS" />
+                <ScalarProperty Name="AST" ColumnName="AST" />
+                <ScalarProperty Name="STL" ColumnName="STL" />
+                <ScalarProperty Name="BLK" ColumnName="BLK" />
+                <ScalarProperty Name="MIN" ColumnName="MIN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlayerDetails">
+            <EntityTypeMapping TypeName="ExploreDBModel.PlayerDetail">
+              <MappingFragment StoreEntitySet="PlayerDetails">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="Contact_No" ColumnName="Contact_No" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="SportID" ColumnName="SportID" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+                <ScalarProperty Name="SchoolAddress" ColumnName="SchoolAddress" />
+                <ScalarProperty Name="Wingspan" ColumnName="Wingspan" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Club" ColumnName="Club" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="GPA" ColumnName="GPA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="ExploreDBModel.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserDetails">
+            <EntityTypeMapping TypeName="ExploreDBModel.UserDetail">
+              <MappingFragment StoreEntitySet="UserDetails">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
